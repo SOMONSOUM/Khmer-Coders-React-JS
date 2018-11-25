@@ -1,25 +1,43 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './resources/styles.css';
+import Header from './components/layouts/Header';
+import Title from './utils/Title';
+import Members from './components/member/Members';
+import Banner from './components/banner/Banner';
+import Events from './components/event/Events';
+import Speakers from './components/speaker/Speakers';
+import Partners from './components/partner/Partners';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Header />
+        <Banner />
+        <section>
+          <div className="wrap">
+            <Title title="Speakers" />
+            <Speakers />
+          </div>
+        </section>
+        <section style={{ background: '#f1f1f1' }}>
+          <div className="wrap">
+            <Title title="Events" />
+            <Events />
+          </div>
+        </section>
+        <section>
+          <div className="wrap">
+            <Title title="Team Members" />
+            <Members />
+          </div>
+        </section>
+        <section style={{ background: '#f1f1f1' }}>
+          <div className="wrap">
+            <Title title="Partners" />
+            <Partners />
+          </div>
+        </section>
       </div>
     );
   }
