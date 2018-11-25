@@ -8,26 +8,27 @@ export class MyForm extends Component {
         place: '',
         desc: ''
     }
-    onTopicChange = e => this.setState({ topic: e.target.value })
-    onUrlChange = e => this.setState({ url: e.target.value })
-    onOrganizerChange = e => this.setState({ organizer: e.target.value })
-    onPlaceChange = e => this.setState({ place: e.target.value })
-    onDescChange = e => this.setState({ desc: e.target.value })
+
+    onChange = e => this.setState({ [e.target.name]: e.target.value })
+
+    onSubmit = e => {
+        e.preventDefault();
+        console.log(this.state)
+    }
 
     render() {
         const { topic, url, organizer, place, desc } = this.state
-        console.log(organizer)
         return (
             <div className='form'>
                 <h2 className='form-title'>Add More Events</h2>
                 <div className="form-list">
-                    <form action="">
+                    <form onSubmit={this.onSubmit}>
                         <div className="form-items">
                             <div className="form-item">
                                 <label htmlFor="topic">Topic</label>
                                 <input
                                     value={topic}
-                                    onChange={this.onTopicChange}
+                                    onChange={this.onChange}
                                     type="text"
                                     name="topic"
                                     className="form-input"
@@ -36,10 +37,10 @@ export class MyForm extends Component {
                                 />
                             </div>
                             <div className="form-item">
-                                <label htmlFor="topic">URL</label>
+                                <label htmlFor="url">URL</label>
                                 <input
                                     value={url}
-                                    onChange={this.onUrlChange}
+                                    onChange={this.onChange}
                                     type="text"
                                     name="url"
                                     className="form-input"
@@ -48,10 +49,10 @@ export class MyForm extends Component {
                                 />
                             </div>
                             <div className="form-item">
-                                <label htmlFor="topic">Organizer</label>
+                                <label htmlFor="organizer">Organizer</label>
                                 <input
                                     value={organizer}
-                                    onChange={this.onOrganizerChange}
+                                    onChange={this.onChange}
                                     type="text"
                                     name="organizer"
                                     className="form-input"
@@ -60,10 +61,10 @@ export class MyForm extends Component {
                                 />
                             </div>
                             <div className="form-item">
-                                <label htmlFor="topic">Place</label>
+                                <label htmlFor="place">Place</label>
                                 <input
                                     value={place}
-                                    onChange={this.onPlaceChange}
+                                    onChange={this.onChange}
                                     type="text"
                                     name="place"
                                     className="form-input"
@@ -72,12 +73,12 @@ export class MyForm extends Component {
                                 />
                             </div>
                             <div className="form-item">
-                                <label htmlFor="topic">Descriptions</label>
+                                <label htmlFor="desc">Descriptions</label>
                                 <textarea
                                     value={desc}
-                                    onChange={this.onDescChange}
+                                    onChange={this.onChange}
                                     type="text"
-                                    name="place"
+                                    name="desc"
                                     className="form-input"
                                     placeholder="Enter your Descriptions"
                                 />
