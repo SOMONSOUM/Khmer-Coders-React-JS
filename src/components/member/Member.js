@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Member = (props) => {
     const {
         avatar,
         name,
         title,
-    } = props;
+    } = props.member;
     return (
         <figure>
             <img src={avatar} alt="avatar" />
@@ -15,6 +16,10 @@ const Member = (props) => {
             </figcaption>
         </figure>
     )
+}
+
+Member.propTypes = {
+    member: PropTypes.object.isRequired
 }
 
 export default Member;

@@ -7,21 +7,23 @@ import Banner from './components/banner/Banner';
 import Events from './components/event/Events';
 import Speakers from './components/speaker/Speakers';
 import Partners from './components/partner/Partners';
+import FabButton from './utils/FabButton';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <React.Fragment>
         <Header />
         <Banner />
-        <section>
+        <React.Fragment>
           <div className="wrap">
             <Title title="Speakers" />
             <Speakers />
           </div>
-        </section>
+        </React.Fragment>
         <section style={{ background: '#cfd8dd' }}>
           <div className="wrap">
+            <FabButton />
             <Title title="Events" />
             <Events />
           </div>
@@ -38,7 +40,7 @@ class App extends Component {
             <Partners />
           </div>
         </section>
-      </div>
+      </React.Fragment>
     );
   }
 }

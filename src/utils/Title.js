@@ -1,12 +1,14 @@
 import React from 'react';
 
 const Title = (props) => {
-    const { title } = props
+    const { title } = props;
     return (
-        <h2 style={{
-            fontWeight: 'bold',
-            fontSize: '30px',
-        }}>{title}</h2>
+        <React.Fragment>
+            <h2 style={{
+                fontWeight: 'bold',
+                fontSize: '30px',
+            }}>{title}</h2>
+        </React.Fragment>
     )
 }
 

@@ -4,6 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Anton');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Kantumruy:300,400,700');
 
 /* ============================
        STYLE FOR GLOBAL
@@ -11,6 +12,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Quicksand', sans-serif;
   }
 
 .wrap {
@@ -30,7 +32,6 @@ body {
 
 .header-logo {
     flex-grow: 1;
-    cursor: pointer;
 }
 
 .branding {

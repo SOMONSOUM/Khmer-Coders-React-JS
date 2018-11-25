@@ -41,6 +41,11 @@ export class Events extends Component {
             ]
         }
     }
+
+    deleteEvent = (id) => {
+        console.log(id)
+    }
+
     render() {
         const { events } = this.state;
         return (
@@ -48,7 +53,10 @@ export class Events extends Component {
                 {events.map(event => (
                     <Event
                         key={event.id}
-                        event={event} />
+                        event={event}
+                        deleteClickHandler={
+                            this.deleteEvent.bind(this, event.id)
+                        } />
                 ))}
             </ul>
         )

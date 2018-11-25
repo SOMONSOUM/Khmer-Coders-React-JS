@@ -46,9 +46,7 @@ export class Members extends Component {
                 {members.map(member => (
                     <Member
                         key={member.id}
-                        avatar={member.avatar}
-                        name={member.name}
-                        title={member.title} />
+                        member={member} />
                 ))}
             </div>
         )

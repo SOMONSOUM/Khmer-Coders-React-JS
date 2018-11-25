@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import LanguageIcon from '@material-ui/icons/Language'
-import IconButton from '@material-ui/core/IconButton';
+// import LanguageIcon from '@material-ui/icons/Language'
+// import IconButton from '@material-ui/core/IconButton';
+import LangButton from '../../utils/LangButton';
 
 class Header extends Component {
     constructor() {
         super()
         this.state = {
-            headerIsSHow: false,
+            headerIsShow: false,
         }
     }
 
@@ -16,11 +17,11 @@ class Header extends Component {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 0) {
                 this.setState({
-                    headerIsSHow: true
+                    headerIsShow: true
                 })
             } else {
                 this.setState({
-                    headerIsSHow: false
+                    headerIsShow: false
                 })
             }
         })
@@ -29,12 +30,11 @@ class Header extends Component {
     render() {
         return (
             <AppBar position="fixed" style={{
-                background: this.state.headerIsSHow ? '#fff' : 'transparent',
+                background: this.state.headerIsShow ? '#fff' : 'transparent',
                 boxShadow: 'none',
                 padding: '0',
                 margin: '0',
-                color: this.state.headerIsSHow ? '#333' : `#fff`,
-                textAlign: 'center',
+                color: this.state.headerIsShow ? '#333' : `#fff`,
             }}>
                 <Toolbar>
                     <div className="header-logo">
@@ -45,9 +45,7 @@ class Header extends Component {
                             We are here to share
                         </div>
                     </div>
-                    <IconButton color="inherit">
-                        <LanguageIcon />
-                    </IconButton>
+                    <LangButton />
                 </Toolbar>
             </AppBar>
         )

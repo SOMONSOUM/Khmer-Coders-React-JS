@@ -76,9 +76,7 @@ export class Speakers extends Component {
                 {speakers.map(speaker => (
                     <Speaker
                         key={speaker.id}
-                        avatar={speaker.avatar}
-                        name={speaker.name}
-                        title={speaker.title} />
+                        speaker={speaker} />
                 ))}
             </div>
         )
