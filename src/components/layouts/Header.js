@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import ContactIcon from '@material-ui/icons/MapSharp'
+import LanguageIcon from '@material-ui/icons/Language'
 import IconButton from '@material-ui/core/IconButton';
 
 class Header extends Component {
@@ -33,7 +33,7 @@ class Header extends Component {
                 boxShadow: 'none',
                 padding: '0',
                 margin: '0',
-                color: this.state.headerIsSHow ? '#333' : '#fff',
+                color: this.state.headerIsSHow ? '#333' : `#fff`,
                 textAlign: 'center',
             }}>
                 <Toolbar>
@@ -46,7 +46,7 @@ class Header extends Component {
                         </div>
                     </div>
                     <IconButton color="inherit">
-                        <ContactIcon />
+                        <LanguageIcon />
                     </IconButton>
                 </Toolbar>
             </AppBar>

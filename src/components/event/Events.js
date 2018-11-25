@@ -48,15 +48,12 @@ export class Events extends Component {
                 {events.map(event => (
                     <Event
                         key={event.id}
-                        link={event.link}
-                        organizer={event.organizer}
-                        topic={event.topic}
-                        meetup={`${event.meetup}`}
-                        date={event.date} />
+                        event={event} />
                 ))}
             </ul>
         )
     }
 }
+
 
 export default Events;

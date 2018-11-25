@@ -20,7 +20,7 @@ class App extends Component {
             <Speakers />
           </div>
         </section>
-        <section style={{ background: '#f1f1f1' }}>
+        <section style={{ background: '#cfd8dd' }}>
           <div className="wrap">
             <Title title="Events" />
             <Events />
@@ -32,7 +32,7 @@ class App extends Component {
             <Members />
           </div>
         </section>
-        <section style={{ background: '#f1f1f1' }}>
+        <section style={{ background: '#cfd8dd' }}>
           <div className="wrap">
             <Title title="Partners" />
             <Partners />

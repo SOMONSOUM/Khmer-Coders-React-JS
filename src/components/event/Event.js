@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export class Event extends Component {
     render() {
@@ -8,7 +9,8 @@ export class Event extends Component {
             organizer,
             topic,
             date,
-        } = this.props
+        } = this.props.event
+
         return (
             <li>
                 <span className="position">
@@ -20,5 +22,10 @@ export class Event extends Component {
         )
     }
 }
+
+Event.propTypes = {
+    event: PropTypes.object.isRequired,
+}
+
 
 export default Event;
