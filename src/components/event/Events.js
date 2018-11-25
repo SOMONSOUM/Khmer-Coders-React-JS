@@ -1,20 +1,9 @@
 import React, { Component } from 'react';
 import Event from './Event';
-import { Consumer } from '../../providers/context'
+import { Consumer } from '../../providers/context';
 
 
 export class Events extends Component {
-
-    /* DELETE FUNCTION WITH FILTER BY ID */
-    deleteEvent = id => {
-        const { events } = this.state
-        const newEvents = events.filter(event => event.id !== id)
-        console.log(`The ${id} was deleted`)
-
-        this.setState({
-            events: newEvents,
-        })
-    };
 
     render() {
         return (
@@ -27,10 +16,7 @@ export class Events extends Component {
                                 {events.map(event => (
                                     <Event
                                         key={event.id}
-                                        event={event}
-                                        deleteClickHandler={
-                                            this.deleteEvent.bind(this, event.id)
-                                        } />
+                                        event={event} />
                                 ))}
                             </ul>
                         </React.Fragment>

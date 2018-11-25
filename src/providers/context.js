@@ -2,6 +2,20 @@ import React, { Component } from 'react';
 
 const Context = React.createContext();
 
+const reducer = (state, action) => {
+    switch (action.type) {
+        case 'DELETE_EVENT':
+            return {
+                ...state,
+                events: state.events.filter(event =>
+                    event.id !== action.payload),
+            }
+
+        default:
+            return state;
+    }
+}
+
 export class Provider extends Component {
     state = {
         events: [
@@ -37,7 +51,9 @@ export class Provider extends Component {
                 date: '1st July 2017 at Emerald Hub',
                 meetup: 1,
             }
-        ]
+        ],
+        dispatch: action => this.setState(state =>
+            reducer(state, action))
     }
 
     render() {

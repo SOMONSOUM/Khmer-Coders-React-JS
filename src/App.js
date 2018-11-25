@@ -9,7 +9,6 @@ import Speakers from './components/speaker/Speakers';
 import Partners from './components/partner/Partners';
 import FabButton from './utils/FabButton';
 
-
 class App extends Component {
   render() {
     return (
