@@ -42,12 +42,19 @@ export class Events extends Component {
         }
     }
 
-    deleteEvent = (id) => {
-        console.log(id)
+    /* DELETE FUNCTION WITH FILTER BY ID */
+    deleteEvent = id => {
+        const { events } = this.state
+        const newEvents = events.filter(event => event.id !== id)
+        console.log(`The ${id} was deleted`)
+
+        this.setState({
+            events: newEvents,
+        })
     }
 
     render() {
-        const { events } = this.state;
+        const { events } = this.state
         return (
             <ul className="events">
                 {events.map(event => (
