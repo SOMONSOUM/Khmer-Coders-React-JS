@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './resources/styles.css';
 import Header from './components/layouts/Header';
-import Title from './utils/Title';
+import MyTitle from './utils/MyTitle';
 import Members from './components/member/Members';
 import Banner from './components/banner/Banner';
 import Events from './components/event/Events';
 import Speakers from './components/speaker/Speakers';
 import Partners from './components/partner/Partners';
-import FabButton from './utils/FabButton';
+import AddEvent from './components/event/AddEvent'
 
 class App extends Component {
   render() {
@@ -17,7 +17,7 @@ class App extends Component {
         <Banner />
         <React.Fragment>
           <div className="wrap">
-            <Title title="Speakers" />
+            <MyTitle title="Speakers" />
             <Speakers />
           </div>
         </React.Fragment>
@@ -25,15 +25,15 @@ class App extends Component {
         <section
           style={{ background: '#cfd8dd' }}>
           <div className="wrap">
-            <FabButton />
-            <Title title="Events" />
+            <MyTitle title="Events" />
             <Events />
+            <AddEvent />
           </div>
         </section>
 
         <section>
           <div className="wrap">
-            <Title title="Team Members" />
+            <MyTitle title="Team Members" />
             <Members />
           </div>
         </section>
@@ -41,7 +41,7 @@ class App extends Component {
         <section
           style={{ background: '#cfd8dd' }}>
           <div className="wrap">
-            <Title title="Partners" />
+            <MyTitle title="Partners" />
             <Partners />
           </div>
         </section>

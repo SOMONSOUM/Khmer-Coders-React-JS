@@ -10,7 +10,6 @@ const reducer = (state, action) => {
                 events: state.events.filter(event =>
                     event.id !== action.payload),
             }
-
         default:
             return state;
     }
