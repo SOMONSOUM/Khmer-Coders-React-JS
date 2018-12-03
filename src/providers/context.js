@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 const Context = React.createContext();
 
@@ -10,6 +11,11 @@ const reducer = (state, action) => {
                 events: state.events.filter(event =>
                     event.id !== action.payload),
             }
+        case 'ADD_EVENT':
+            return {
+                ...state,
+                events: [action.payload, ...state.events]
+            }
         default:
             return state;
     }
@@ -17,42 +23,16 @@ const reducer = (state, action) => {
 
 export class Provider extends Component {
     state = {
-        events: [
-            {
-                id: 1,
-                link: '#',
-                organizer: 'Facebook Developer Circle Phnom Penh Meetup',
-                topic: 'Introduction to React Native',
-                date: '29th September 2018 at University of Puthisastra',
-                meetup: 2
-            },
-            {
-                id: 2,
-                link: '#',
-                organizer: 'Facebook Developer Circle Phnom Penh Meetup',
-                topic: 'Messenger Bot 101',
-                date: '7th July 2018 at Emerald Hub',
-                meetup: 1
-            },
-            {
-                id: 3,
-                link: '#',
-                organizer: 'Khmer Coders Convention',
-                topic: '',
-                date: '9th September 2017 at Zaman University',
-                meetup: 2,
-            },
-            {
-                id: 4,
-                link: '#',
-                organizer: 'Khmer Coders Convention',
-                topic: '',
-                date: '1st July 2017 at Emerald Hub',
-                meetup: 1,
-            }
-        ],
+        events: [],
         dispatch: action => this.setState(state =>
             reducer(state, action))
+    }
+    componentWillMount() {
+        axios.get(`http://localhost:3333/api/events`)
+            .then(res => {
+                const events = res.data
+                this.setState({ events })
+            })
     }
 
     render() {

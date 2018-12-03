@@ -7,7 +7,7 @@ import Banner from './components/banner/Banner';
 import Events from './components/event/Events';
 import Speakers from './components/speaker/Speakers';
 import Partners from './components/partner/Partners';
-import AddEvent from './components/event/AddEvent'
+// import AddEvent from './components/event/AddEvent'
 
 class App extends Component {
   render() {
@@ -27,7 +27,7 @@ class App extends Component {
           <div className="wrap">
             <MyTitle title="Events" />
             <Events />
-            <AddEvent />
+            {/* <AddEvent /> */}
           </div>
         </section>
 

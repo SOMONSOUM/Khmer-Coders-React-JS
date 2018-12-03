@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 
 const Speaker = (props) => {
     const {
-        avatar,
+        photo,
         name,
         title,
     } = props.speaker;
     return (
         <React.Fragment>
             <figure>
-                <img src={avatar} alt="avatar" />
+                <img src={photo} alt="avatar" />
                 <figcaption>
                     <span className="name">{name}</span>
                     <span className="title">{title}</span>
