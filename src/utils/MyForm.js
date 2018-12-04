@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Consumer } from '../providers/context';
+import { Consumer } from '../Providers/context';
 import uuid from 'uuid';
 
 export class MyForm extends Component {

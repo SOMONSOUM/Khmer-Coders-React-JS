@@ -24,15 +24,30 @@ const reducer = (state, action) => {
 export class Provider extends Component {
     state = {
         events: [],
+        speakers: [],
         dispatch: action => this.setState(state =>
             reducer(state, action))
     }
-    componentWillMount() {
-        axios.get(`http://localhost:3333/api/events`)
+
+    componentDidMount() {
+        this.getEvents();
+        this.getSpeakers()
+    }
+
+    async getEvents() {
+        await axios.get(`http://cd304a1d.ngrok.io/api/events`)
             .then(res => {
                 const events = res.data
                 this.setState({ events })
-            })
+            }).catch(err => console.log(err))
+    }
+
+    async getSpeakers() {
+        await axios.get(`http://cd304a1d.ngrok.io/api/speakers`)
+            .then(res => {
+                const speakers = res.data
+                this.setState({ speakers })
+            }).catch(err => console.log(err))
     }
 
     render() {

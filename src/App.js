@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import './resources/styles.css';
-import Header from './components/layouts/Header';
+import './Resources/css/app.css';
+import Header from './components/Layouts/Header';
 import MyTitle from './utils/MyTitle';
-import Members from './components/member/Members';
-import Banner from './components/banner/Banner';
-import Events from './components/event/Events';
-import Speakers from './components/speaker/Speakers';
-import Partners from './components/partner/Partners';
-// import AddEvent from './components/event/AddEvent'
+import Members from './components/Member/Members';
+import Banner from './components/Banner/Banner';
+import Events from './components/Event/Events';
+import Speakers from './components/Speaker/Speakers';
+import Partners from './components/Partner/Partners';
 
 class App extends Component {
   render() {
@@ -27,7 +26,6 @@ class App extends Component {
           <div className="wrap">
             <MyTitle title="Events" />
             <Events />
-            {/* <AddEvent /> */}
           </div>
         </section>
 

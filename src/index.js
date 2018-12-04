@@ -1,13 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
-import { Provider } from './providers/context'
+import { Provider } from './providers/context';
+
+const MyApp = props => {
+    return (
+        <React.Fragment>
+            <Router>
+                <App />
+            </Router>
+        </React.Fragment>
+    )
+}
 
 ReactDOM.render(
     <Provider>
-        <App />
+        <MyApp />
     </Provider>,
-    document.getElementById('root'));
-
-serviceWorker.unregister();
+    document.getElementById('root')
+);
