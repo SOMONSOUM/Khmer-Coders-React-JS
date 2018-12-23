@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+
 import Circle from '../Button/Circle';
 import LogoImage from '../Logo/LogoImg';
-import KhmerCoders from '../../Resources/images/manchester_city_logo.png'
-import Kh from '../../Resources/images/kh-flag.png'
-import En from '../../Resources/images/en-flag.png'
+import Kh from '../../Resources/images/kh-flag.png';
+import En from '../../Resources/images/en-flag.png';
+import KhmerCoders from '../../Resources/images/manchester_city_logo.png';
 
 class Header extends Component {
     constructor() {

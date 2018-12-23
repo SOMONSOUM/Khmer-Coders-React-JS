@@ -35,7 +35,7 @@ export class Provider extends Component {
     }
 
     async getEvents() {
-        await axios.get(`http://cd304a1d.ngrok.io/api/events`)
+        await axios.get(`http://localhost:3333/api/events`)
             .then(res => {
                 const events = res.data
                 this.setState({ events })
@@ -43,7 +43,7 @@ export class Provider extends Component {
     }
 
     async getSpeakers() {
-        await axios.get(`http://cd304a1d.ngrok.io/api/speakers`)
+        await axios.get(`http://localhost:3333/api/speakers`)
             .then(res => {
                 const speakers = res.data
                 this.setState({ speakers })

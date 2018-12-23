@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Slide from 'react-reveal';
+
 import Speaker from './Speaker';
 import Loader from '../Loader/Loader'
 import { Consumer } from '../../providers/context';
@@ -19,13 +21,15 @@ export class Speakers extends Component {
                         )
                     } else {
                         return (
-                            <div className="members">
-                                {speakers.map(speaker => (
-                                    <Speaker
-                                        key={speaker.id}
-                                        speaker={speaker} />
-                                ))}
-                            </div>
+                            <Slide top>
+                                <div className="members">
+                                    {speakers.map(speaker => (
+                                        <Speaker
+                                            key={speaker.id}
+                                            speaker={speaker} />
+                                    ))}
+                                </div>
+                            </Slide>
                         )
                     }
                 }}

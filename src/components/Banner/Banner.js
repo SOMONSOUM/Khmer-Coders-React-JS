@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import MyButton from '../../utils/MyButton';
+import React, { Component } from 'react';
+import { LinkButton } from '../Button/Button';
 
 export class Banner extends Component {
     render() {
@@ -20,7 +20,7 @@ export class Banner extends Component {
                         </strong>
                         <span className='cursor'>&nbsp;</span>
                     </p>
-                    <MyButton
+                    <LinkButton
                         link='#'
                         title='Join KhmerCoders' />
                 </div>

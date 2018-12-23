@@ -1,15 +1,15 @@
 import React from 'react';
 import Header from '../components/Layouts/Header';
-import Footer from '../components/Partner/Partner';
+import Partners from '../components/Partner/Main';
 
 const Layout = (props) => {
     return (
         <React.Fragment>
             <Header />
             {props.children}
-            <Footer />
+            <Partners title="Partners" bgColor="#cfd8dd" />
         </React.Fragment>
     )
 }
 
-export default Layout
+export default Layout;

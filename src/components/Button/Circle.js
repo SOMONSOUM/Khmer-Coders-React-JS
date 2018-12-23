@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import './Circle.css'
+import './Circle.css';
 import Image from '../Image/Image';
 
 const Circle = (props) => {

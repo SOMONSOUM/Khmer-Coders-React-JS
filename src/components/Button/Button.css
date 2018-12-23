@@ -1,0 +1,17 @@
+/* ============================
+            BUTTON
+=============================== */
+
+.button, .button:visited {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    color: #fff;
+    background: #27ae60;
+    border: none;
+}
+  
+.button:hover {
+    color: #fff;
+    background: #2ecc71;
+    text-decoration: none;
+}

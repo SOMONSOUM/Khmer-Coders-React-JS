@@ -1,11 +1,19 @@
-import React from 'react'
+import React from 'react';
 
-const Button = (Props) => {
+import './Button.css';
+
+export const LinkButton = (props) => {
+    const { title, link } = props;
     return (
-        <div>
+        <React.Fragment>
+            <a
+                className='button'
+                href={link}
+                style={{
 
-        </div>
+                }}>
+                {title}
+            </a>
+        </React.Fragment>
     )
 }
-
-export default Button;
